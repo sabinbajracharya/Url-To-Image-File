@@ -37,7 +37,7 @@ The name of the image will be as
 --- nameOfPic1.jpg
 --- nameOfPic2.jpg and so on as per the number of url supplied
 
-<b>4) Use the downloaded images</b>
+<b>5) Use the downloaded images</b>
 File file = new File(getFilesDir(),"hello/sabin/doctor/" + "mypic1.jpg"); //To use image from second url
 if(file.exists()){
   //use the file as necessary
