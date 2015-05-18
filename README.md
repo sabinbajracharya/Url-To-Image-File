@@ -25,17 +25,23 @@ Steps to add the libray in Android Studio </br>
   <b>2) Pass the String url or Array of String url to getBitMapFromUrl function as</b>
   Bitmap[] bitmaps = ImageDownloader.getBitMapFromUrl(url); // returns bitmpas equal to the number of url
      
-  <b>4) Pass the above "bitmaps" to setOutputMediaFile(Context c, Bitmap[] b, String path, String name);</b>
+  <b>4) Pass the above "bitmaps" to setOutputMediaFile(Context c, Bitmap[] b, String path, String nameOfPic);</b>
   if(bitmaps != null){
-    ImageDownloader.setOutputMediaFile(context, bitmaps, "hello/sabin/doctor", "image");
+    ImageDownloader.setOutputMediaFile(context, bitmaps, "hello/sabin/doctor", "mypic");
   }
     
   <b>Output</b>
-  File will be downloaded and stored in 
-  Android/data/"Your App Packagename"/hello/sabin/doctor/image0.jpg
-  Android/data/"Your App Packagename"/hello/sabin/doctor/image1.jpg
-  Android/data/"Your App Packagename"/hello/sabin/doctor/image2.jpg
-  <b>and so on as per the number of url supplied....</b>
+  File will be downloaded and stored in Internal Storage of the app.
+  The name of the image will be as  
+  --- nameOfPic0.jpg  // here in the example nameOfPic = mypic so (mypic0.jpg)
+  --- nameOfPic1.jpg
+  --- nameOfPic2.jpg and so on as per the number of url supplied
+  
+  <b>4) Use the downloaded images</b>
+  File file = new File(getFilesDir(),"hello/sabin/doctor/" + "mypic1.jpg"); //To use image from second url
+  if(file.exists()){
+    //use the file as necessary
+  }
     
  <b> NOTE -- Perform the operation in a background thread! </b>
 </pre>
