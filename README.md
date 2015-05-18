@@ -15,7 +15,7 @@ Steps to add the libray in Android Studio </br>
 
 <pre>
   <b>1) Add url in a string or array of string</b>
-  String url = ""http://www.w3schools.com/images/w3schools_green.jpg";
+  String url = "http://www.w3schools.com/images/w3schools_green.jpg";
                           or
   String[] url = {
       "http://www.w3schools.com/images/w3schools_green.jpg",
