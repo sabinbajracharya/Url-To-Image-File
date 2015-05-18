@@ -62,7 +62,7 @@ public class ImageDownloader {
     public static void setOutputMediaFile(Context context, Bitmap[] bitmap, String path, String fileName){
         FileOutputStream fileOutputStream = null;
 
-            File directory = new File(context.getFilesDir() + "/" + path");
+            File directory = new File(context.getFilesDir() + "/" + path);
 
             if(!directory.exists()){
                 directory.mkdirs();
