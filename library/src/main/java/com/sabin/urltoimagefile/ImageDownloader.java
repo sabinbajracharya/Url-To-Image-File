@@ -69,20 +69,17 @@ public class ImageDownloader {
             }
             for(Bitmap singleBitmap : bitmap){
                 if(singleBitmap != null){
-                    file = new File(directory,fileName + count + ".png");
+                    file = new File(directory,fileName + count + ".jpg");
 
-                    if(!file.exists()){
-                        try {
-                            file.createNewFile();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                    if(file.exists()){
+                        file.delete();
                     }
 
                     try {
+                        file.createNewFile();
                         fileOutputStream = new FileOutputStream(file);
-
-                        singleBitmap.compress(Bitmap.CompressFormat.PNG, 50, fileOutputStream);
+                        singleBitmap.compress(Bitmap.CompressFormat.JPEG, 50, fileOutputStream);
+                        fileOutputStream.flush();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
