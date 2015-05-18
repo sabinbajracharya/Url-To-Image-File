@@ -32,9 +32,9 @@ Steps to add the libray in Android Studio </br>
     
   <b>Output</b>
   File will be downloaded and stored in 
-  Android/data/"Your App Packagename"/hello/sabin/doctor/image0.png
-  Android/data/"Your App Packagename"/hello/sabin/doctor/image1.png
-  Android/data/"Your App Packagename"/hello/sabin/doctor/image2.png
+  Android/data/"Your App Packagename"/hello/sabin/doctor/image0.jpg
+  Android/data/"Your App Packagename"/hello/sabin/doctor/image1.jpg
+  Android/data/"Your App Packagename"/hello/sabin/doctor/image2.jpg
   <b>and so on as per the number of url supplied....</b>
     
  <b> NOTE -- Perform the operation in a background thread! </b>
