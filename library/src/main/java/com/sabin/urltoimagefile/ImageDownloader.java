@@ -60,28 +60,33 @@ public class ImageDownloader {
     }
 
     public static void setOutputMediaFile(Context context, Bitmap[] bitmap, String path, String fileName){
-            File directory = new File(Environment.getExternalStorageDirectory() + "/Android/data/"+context.getPackageName()+"/" + path);
-            FileOutputStream fileOutputStream = null;
-            File file = null;
-            int count = 0;
+        FileOutputStream fileOutputStream = null;
+
+            File directory = new File(context.getFilesDir() + "/images");
+
             if(!directory.exists()){
                 directory.mkdirs();
             }
+
+            int count = 0;
+
             for(Bitmap singleBitmap : bitmap){
                 if(singleBitmap != null){
-                    file = new File(directory,fileName + count + ".jpg");
+
+                    String fullFileName =  fileName + count + ".jpg";
+                    File file = new File(directory,fullFileName);
 
                     if(file.exists()){
-                        file.delete();
+                       file.delete();
                     }
 
                     try {
                         file.createNewFile();
+                        //fileOutputStream = context.openFileOutput(fullFileName, Context.MODE_PRIVATE);
                         fileOutputStream = new FileOutputStream(file);
                         singleBitmap.compress(Bitmap.CompressFormat.JPEG, 50, fileOutputStream);
                         fileOutputStream.flush();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     } finally {
@@ -97,6 +102,5 @@ public class ImageDownloader {
                 }
 
             }
-
     }
 }
