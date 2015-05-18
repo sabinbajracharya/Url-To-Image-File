@@ -26,7 +26,9 @@ Steps to add the libray in Android Studio </br>
   Bitmap[] bitmaps = ImageDownloader.getBitMapFromUrl(url); // returns bitmpas equal to the number of url
      
   <b>4) Pass the above "bitmaps" to setOutputMediaFile(Context c, Bitmap[] b, String path, String name);</b>
-  ImageDownloader.setOutputMediaFile(context, bitmaps, "hello/sabin/doctor", "image");
+  if(bitmaps != null){
+    ImageDownloader.setOutputMediaFile(context, bitmaps, "hello/sabin/doctor", "image");
+  }
     
   <b>Output</b>
   File will be downloaded and stored in 
