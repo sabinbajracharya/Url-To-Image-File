@@ -33,7 +33,7 @@ if(bitmaps != null){
 }
 </pre>  
 <b>Output</b>
-<pre>File will be downloaded and stored in Internal Storage of the app.
+<pre>Images will be downloaded and stored in Internal Storage of the app.
 The name of the image will be as  
 --- nameOfPic0.jpg  // here in the example nameOfPic = mypic so (mypic0.jpg)
 --- nameOfPic1.jpg
