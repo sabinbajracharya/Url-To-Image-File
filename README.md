@@ -23,7 +23,7 @@ String[] url = {
 }
 </pre>
   
-<b>2) Pass the String url or Array of String url to getBitMapFromUrl(String... url)</b>
+<b>2) Call getBitMapFromUrl(String... url) and provide the url as paramter</b>
 <pre>Bitmap[] bitmaps = ImageDownloader.getBitMapFromUrl(url); // returns bitmpas equal to the number of url</pre>
    
 <b>3) Call setOutputMediaFile(Context c, Bitmap[] bitmpas, String path, String nameOfPic); and provide appropriate parameters</b>
